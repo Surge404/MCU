@@ -61,7 +61,7 @@ const JobPage = () => {
 
       <div className="flex justify-between ">
         <div className="flex gap-2">
-          <MapPinIcon /> {job?.location}
+          <MapPinIcon /> MANIT, Bhopal {job?.location}
         </div>
         <div className="flex gap-2">
           <Briefcase /> {job?.applications?.length} Applicants
@@ -86,7 +86,7 @@ const JobPage = () => {
           >
             <SelectValue
               placeholder={
-                "Hiring Status " + (job?.isOpen ? "( Open )" : "( Closed )")
+                "Event Status " + (job?.isOpen ? "( Open )" : "( Closed )")
               }
             />
           </SelectTrigger>
@@ -97,11 +97,11 @@ const JobPage = () => {
         </Select>
       )}
 
-      <h2 className="text-2xl sm:text-3xl font-bold">About the job</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold">Event Description</h2>
       <p className="sm:text-lg">{job?.description}</p>
 
       <h2 className="text-2xl sm:text-3xl font-bold">
-        What we are looking for
+        What we expect our rookies to have - 
       </h2>
       <MDEditor.Markdown
         source={job?.requirements}

@@ -27,8 +27,7 @@ import { z } from "zod";
 const schema = z.object({
   title: z.string().min(1, { message: "Title is required" }),
   description: z.string().min(1, { message: "Description is required" }),
-  location: z.string().min(1, { message: "Select a location" }),
-  company_id: z.string().min(1, { message: "Select or Add a new Company" }),
+  company_id: z.string().min(1, { message: "Select or Add a new Event" }),
   requirements: z.string().min(1, { message: "Requirements are required" }),
 });
 
@@ -89,48 +88,29 @@ const PostJob = () => {
   return (
     <div>
       <h1 className="gradient-title font-extrabold text-5xl sm:text-7xl text-center pb-8">
-        Post a Job
+        Post an upcoming event
       </h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col gap-4 p-4 pb-0"
       >
-        <Input placeholder="Job Title" {...register("title")} />
+        <Input placeholder="Event Title" {...register("title")} />
         {errors.title && <p className="text-red-500">{errors.title.message}</p>}
 
-        <Textarea placeholder="Job Description" {...register("description")} />
+        <Textarea placeholder="Add a Description for your event" {...register("description")} />
         {errors.description && (
           <p className="text-red-500">{errors.description.message}</p>
         )}
 
         <div className="flex gap-4 items-center">
-          <Controller
-            name="location"
-            control={control}
-            render={({ field }) => (
-              <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Job Location" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    {State.getStatesOfCountry("IN").map(({ name }) => (
-                      <SelectItem key={name} value={name}>
-                        {name}
-                      </SelectItem>
-                    ))}
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-            )}
-          />
+          
           <Controller
             name="company_id"
             control={control}
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Company">
+                  <SelectValue placeholder="What Society are you associated with??">
                     {field.value
                       ? companies?.find((com) => com.id === Number(field.value))
                           ?.name
@@ -149,7 +129,7 @@ const PostJob = () => {
               </Select>
             )}
           />
-          <AddCompanyDrawer fetchCompanies={fnCompanies} />
+          {/* <AddCompanyDrawer fetchCompanies={fnCompanies} /> */}
         </div>
         {errors.location && (
           <p className="text-red-500">{errors.location.message}</p>

@@ -14,7 +14,7 @@ export async function applyToJob(token, _, jobData) {
   if (storageError) throw new Error("Error uploading Resume");
 
   const resume = `${supabaseUrl}/storage/v1/object/public/resumes/${fileName}`;
-
+  
   const { data, error } = await supabase
     .from("applications")
     .insert([

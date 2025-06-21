@@ -14,6 +14,8 @@ import { deleteJob, saveJob } from "@/api/apiJobs";
 import { useUser } from "@clerk/clerk-react";
 import { useEffect, useState } from "react";
 import { BarLoader } from "react-spinners";
+import { LocateIcon } from "lucide-react";
+import { PinIcon } from "lucide-react";
 
 const JobCard = ({
   job,
@@ -74,7 +76,7 @@ const JobCard = ({
         <div className="flex justify-between">
           {job.company && <img src={job.company.logo_url} className="h-6" />}
           <div className="flex gap-2 items-center">
-            <MapPinIcon size={15} /> {job.location}
+          <PinIcon size={15} />{job.location}
           </div>
         </div>
         <hr />

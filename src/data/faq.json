@@ -1,26 +1,74 @@
 [
   {
-    "question": "What is Hirrd?",
-    "answer": "Hirrd is a Job Portal Application allows companies to post job listings and users to search and apply for jobs. It provides features for both job seekers and employers, with user-friendly interfaces and secure authentication."
+    "question": "How can I stay up to date with college events?",
+    "answer": "All event announcements from campus societies are posted right here on this platform. Just check back regularly or turn on notifications if available."
   },
   {
-    "question": "How do I post a job?",
-    "answer": "As an employer, you can post a job by navigating to the 'Post Job' section after logging in. Fill in the job details and submit the form to create a new job listing."
+    "question": "How do I get hired into a society?",
+    "answer": "Societies publish recruitment drives on this platform. Keep an eye on upcoming drives and follow the instructions provided in the post to apply."
   },
   {
-    "question": "How can I search for jobs?",
-    "answer": "Job seekers can search for jobs by keywords, location, category, and other filters using the search bar on the homepage or the dedicated job search page."
+    "question": "How do I contact the seniors of a particular society?",
+    "answer": "You can reach out to the requisite society through their official Instagram handle (almost every society has one). Alternatively, contact surge3-14@gmail.com for guidance."
   },
   {
-    "question": "How do I apply for a job?",
-    "answer": "To apply for a job, click on the job listing and follow the application instructions provided. You may need to upload your resume and provide additional information."
+    "question": "I have new ideas. Whom should I approach?",
+    "answer": "Feel free to DM the relevant society on Instagram. If you're not sure who to contact, you can always write to surge3-14@gmail.com and you’ll be directed to the right people."
   },
   {
-    "question": "Can I save jobs to apply later?",
-    "answer": "Yes, you can save job listings by clicking the 'Save Job' button on the job listing. Saved jobs can be accessed from your profile under the 'Saved Jobs' section."
+    "question": "I need guidance. What can I do?",
+    "answer": "You can connect with society members through their Instagram handles. If you're stuck, surge3-14@gmail.com is your fallback option."
   },
   {
-    "question": "How do I track my job applications?",
-    "answer": "Job seekers can track the status of their applications from the 'Applications' section in their profile. This section provides updates on the progress of each application."
-  }
+    "question": "I'm a society coordinator. How do I post an event?",
+    "answer": "Log in to your coordinator account, go to the 'Post Event' section, and fill in all required details. Make sure to provide clear descriptions, visuals, and deadlines."
+  },
+  {
+    "question": "What kind of events can be posted here?",
+    "answer": "You can post society events, workshops, talks, competitions, recruitments, or anything open to the student community that promotes growth and engagement."
+  },
+  {
+    "question": "Who governs these societies?",
+    "answer": "All student societies operate under the oversight of the Student Council, which ensures smooth coordination, accountability, and equal opportunity across all student-led initiatives."
+  },
+  {
+      "question": "Can I be part of multiple societies?",
+      "answer": "Yes, students are allowed to join multiple societies as long as they can manage their time and responsibilities efficiently."
+    },
+    {
+      "question": "Is there any eligibility criteria to join a society?",
+      "answer": "Most societies welcome all students, but some may have basic skill tests or interviews during recruitment. Follow their Instagram handles or posts here for specific details."
+    },
+    {
+      "question": "When do society recruitments usually happen?",
+      "answer": "Recruitments generally happen at the start of each semester. Keep checking this platform and the Instagram handles of societies for announcements."
+    },
+    {
+      "question": "What if I missed the recruitment drive?",
+      "answer": "Some societies conduct off-cycle recruitments. You can follow their Instagram for updates or email surge3-14@gmail.com to inquire about alternative options."
+    },
+    {
+      "question": "Are first-years allowed to participate in society events?",
+      "answer": "Absolutely! Freshers are encouraged to take part in events to build connections, skills, and discover their interests."
+    },
+    {
+      "question": "Can I start my own society?",
+      "answer": "Yes, you can propose a new society through the Student Council. The process involves submission of a proposal, core team info, and purpose justification."
+    },
+    {
+      "question": "Where can I see past events organized by societies?",
+      "answer": "This platform archives all events. Scroll through older announcements or visit the Instagram pages of the societies for event highlights."
+    },
+    {
+      "question": "I want to volunteer for events. How can I do that?",
+      "answer": "Event posts often mention open volunteer roles. DM the respective society on Instagram or email surge3-14@gmail.com to express your interest."
+    },
+    {
+      "question": "How do I give feedback about an event?",
+      "answer": "Most events have a feedback form shared after completion. If not, you can DM the society on Instagram or write to surge3-14@gmail.com."
+    },
+    {
+      "question": "What benefits do I get by joining a society?",
+      "answer": "You gain hands-on experience, build a network, improve soft and technical skills, and boost your resume — all while having fun with like-minded peers."
+    }
 ]

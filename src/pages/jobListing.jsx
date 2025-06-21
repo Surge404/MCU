@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useUser } from "@clerk/clerk-react";
-import { State } from "country-state-city";
 import { BarLoader } from "react-spinners";
 import useFetch from "@/hooks/use-fetch";
 
@@ -21,13 +20,11 @@ import { getJobs } from "@/api/apiJobs";
 
 const JobListing = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [location, setLocation] = useState("");
   const [company_id, setCompany_id] = useState("");
 
   const { isLoaded } = useUser();
 
   const {
-    // loading: loadingCompanies,
     data: companies,
     fn: fnCompanies,
   } = useFetch(getCompanies);
@@ -37,7 +34,6 @@ const JobListing = () => {
     data: jobs,
     fn: fnJobs,
   } = useFetch(getJobs, {
-    location,
     company_id,
     searchQuery,
   });
@@ -46,13 +42,11 @@ const JobListing = () => {
     if (isLoaded) {
       fnCompanies();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoaded]);
 
   useEffect(() => {
     if (isLoaded) fnJobs();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLoaded, location, company_id, searchQuery]);
+  }, [isLoaded, company_id, searchQuery]);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -65,7 +59,6 @@ const JobListing = () => {
   const clearFilters = () => {
     setSearchQuery("");
     setCompany_id("");
-    setLocation("");
   };
 
   if (!isLoaded) {
@@ -75,7 +68,7 @@ const JobListing = () => {
   return (
     <div className="">
       <h1 className="gradient-title font-extrabold text-6xl sm:text-7xl text-center pb-8">
-        Latest Jobs
+        Upcoming Events!
       </h1>
       <form
         onSubmit={handleSearch}
@@ -83,9 +76,9 @@ const JobListing = () => {
       >
         <Input
           type="text"
-          placeholder="Search Jobs by Title.."
+          placeholder="Search events by their Title.."
           name="search-query"
-          className="h-full flex-1  px-4 text-md"
+          className="h-full flex-1 px-4 text-md"
         />
         <Button type="submit" className="h-full sm:w-28" variant="blue">
           Search
@@ -93,29 +86,12 @@ const JobListing = () => {
       </form>
 
       <div className="flex flex-col sm:flex-row gap-2">
-        <Select value={location} onValueChange={(value) => setLocation(value)}>
-          <SelectTrigger>
-            <SelectValue placeholder="Filter by Location" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              {State.getStatesOfCountry("IN").map(({ name }) => {
-                return (
-                  <SelectItem key={name} value={name}>
-                    {name}
-                  </SelectItem>
-                );
-              })}
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-
         <Select
           value={company_id}
           onValueChange={(value) => setCompany_id(value)}
         >
           <SelectTrigger>
-            <SelectValue placeholder="Filter by Company" />
+            <SelectValue placeholder="Filter events by the Socities" />
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
@@ -155,7 +131,7 @@ const JobListing = () => {
               );
             })
           ) : (
-            <div>No Jobs Found 😢</div>
+            <div>No events in forseeable future...</div>
           )}
         </div>
       )}

@@ -31,10 +31,16 @@ const Header = () => {
 
   return (
     <>
-      <nav className="py-4 flex justify-between items-center">
-        <Link to="/">
-          <img src="/logo.png" className="h-20" alt="Hirrd Logo" />
-        </Link>
+      <nav className="py-4 flex justify-between items-center px-5">
+      <div className="p-4">
+  <Link to="/" className="flex items-center gap-4">
+    <img src="/manitLogo.png" className="h-20" alt="Our Logo" />
+    <span className="text-3xl font-bold text-blue-700 ">
+      Manit Collaborative Unity
+    </span>
+  </Link>
+</div>
+
 
         <div className="flex gap-8">
           <SignedOut>
@@ -47,25 +53,25 @@ const Header = () => {
               <Link to="/post-job">
                 <Button variant="destructive" className="rounded-full">
                   <PenBox size={20} className="mr-2" />
-                  Post a Job
+                  Add an upcoming event
                 </Button>
               </Link>
             )}
             <UserButton
               appearance={{
                 elements: {
-                  avatarBox: "w-10 h-10",
+                  avatarBox: "w-15 h-15",
                 },
               }}
             >
               <UserButton.MenuItems>
                 <UserButton.Link
-                  label="My Jobs"
+                  label="My Events"
                   labelIcon={<BriefcaseBusiness size={15} />}
                   href="/my-jobs"
                 />
                 <UserButton.Link
-                  label="Saved Jobs"
+                  label="Favourite Events"
                   labelIcon={<Heart size={15} />}
                   href="/saved-jobs"
                 />

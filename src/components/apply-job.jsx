@@ -23,12 +23,24 @@ import { BarLoader } from "react-spinners";
 const schema = z.object({
   experience: z
     .number()
-    .min(0, { message: "Experience must be at least 0" })
+    .min(0, { message: "Year of study must be at least 0" })
     .int(),
-  skills: z.string().min(1, { message: "Skills are required" }),
-  education: z.enum(["Intermediate", "Graduate", "Post Graduate"], {
-    message: "Education is required",
-  }),
+  skills: z.string().min(1, { message: "Verticals/Interests are required" }),
+  education: z.enum(
+    [
+      "B. Tech",
+      "B. Plan",
+      "B. Arch",
+      "M. Tech",
+      "M. Sc",
+      "M.B.A",
+      "P.H.D",
+      "M.C.A",
+    ],
+    {
+      message: "Education is required",
+    }
+  ),
   resume: z
     .any()
     .refine(
@@ -36,7 +48,10 @@ const schema = z.object({
         file[0] &&
         (file[0].type === "application/pdf" ||
           file[0].type === "application/msword"),
-      { message: "Only PDF or Word documents are allowed" }
+      {
+        message:
+          "Kindly upload a pdf which consists of your Student-ID-Card along with your resume and port-folios if required for this event",
+      }
     ),
 });
 
@@ -87,7 +102,7 @@ export function ApplyJobDrawer({ user, job, fetchJob, applied = false }) {
           <DrawerTitle>
             Apply for {job?.title} at {job?.company?.name}
           </DrawerTitle>
-          <DrawerDescription>Please Fill the form below</DrawerDescription>
+          <DrawerDescription>This Event is only for MANITians; Outside Junta is strictly prohibited.</DrawerDescription>
         </DrawerHeader>
 
         <form
@@ -96,7 +111,7 @@ export function ApplyJobDrawer({ user, job, fetchJob, applied = false }) {
         >
           <Input
             type="number"
-            placeholder="Years of Experience"
+            placeholder="Year of Study"
             className="flex-1"
             {...register("experience", {
               valueAsNumber: true,
@@ -107,7 +122,7 @@ export function ApplyJobDrawer({ user, job, fetchJob, applied = false }) {
           )}
           <Input
             type="text"
-            placeholder="Skills (Comma Separated)"
+            placeholder="Verticals / Interests (Comma Separated)"
             className="flex-1"
             {...register("skills")}
           />
@@ -119,18 +134,21 @@ export function ApplyJobDrawer({ user, job, fetchJob, applied = false }) {
             control={control}
             render={({ field }) => (
               <RadioGroup onValueChange={field.onChange} {...field}>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Intermediate" id="intermediate" />
-                  <Label htmlFor="intermediate">Intermediate</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Graduate" id="graduate" />
-                  <Label htmlFor="graduate">Graduate</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Post Graduate" id="post-graduate" />
-                  <Label htmlFor="post-graduate">Post Graduate</Label>
-                </div>
+                {[
+                  "B. Tech",
+                  "B. Plan",
+                  "B. Arch",
+                  "M. Tech",
+                  "M. Sc",
+                  "M.B.A",
+                  "P.H.D",
+                  "M.C.A",
+                ].map((val) => (
+                  <div key={val} className="flex items-center space-x-2">
+                    <RadioGroupItem value={val} id={val} />
+                    <Label htmlFor={val}>{val}</Label>
+                  </div>
+                ))}
               </RadioGroup>
             )}
           />
@@ -164,3 +182,4 @@ export function ApplyJobDrawer({ user, job, fetchJob, applied = false }) {
     </Drawer>
   );
 }
+ 
