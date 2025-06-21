@@ -27,7 +27,7 @@ const LandingPage = () => {
   Embrace Your Very Own Culture,
   <span className="flex items-center gap-2 sm:gap-6">
     Discover The Real "You".{" "}
-    <img src="public/MCU.png" alt="MCU!" className="h-14 sm:h-24 lg:h-32" />
+    <img src="/MCU.png" alt="MCU!" className="h-14 sm:h-24 lg:h-32" />
   </span>
 </h1>
 <p className="text-gray-300 sm:mt-4 text-xs sm:text-xl">Explore our offerings — enhance your skills, enjoy the journey, and find where you belong.</p>
