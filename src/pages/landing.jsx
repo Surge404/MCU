@@ -54,7 +54,7 @@ const LandingPage = () => {
           companies.map(({name, id, path})=>
           {
             return (
-              <CarouselItem key={id} className="basis-1/3 lg:basis-1/6"><img src={path} alt={name} className="h-90  object=contain"/></CarouselItem>
+              <CarouselItem key={id} className="basis-1/3 lg:basis-1/6"><img src={path} alt={name} className="h-90  object-contain"/></CarouselItem>
             );
           })
         }
@@ -62,6 +62,7 @@ const LandingPage = () => {
       
     </Carousel>
       <img src="/socities2.png" className="w-full" />
+      <img src="/mcu.png" alt="mcu!" className="w-full" />
 
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
