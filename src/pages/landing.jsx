@@ -61,7 +61,7 @@ const LandingPage = () => {
       </CarouselContent>
       
     </Carousel>
-      <img src="/socities2.png" className="w-full" />
+      <img src="/pict.png" alt="pict!" className="w-full" />
       <img src="/mcu.png" alt="mcu!" className="w-full" />
 
 
