@@ -61,7 +61,7 @@ const LandingPage = () => {
       </CarouselContent>
       
     </Carousel>
-      <img src="/socities2.png" alt="SecondImage!" className="w-full" />
+      <img src="/socities2.png" className="w-full" />
 
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
