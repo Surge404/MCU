@@ -61,7 +61,7 @@ const LandingPage = () => {
       </CarouselContent>
       
     </Carousel>
-      <img src="/socities1.png"  alt="MCU! className="w-full" />
+      <img src="/MCU.png"  alt="SecondImage! className="w-full" />
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <Card className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white shadow-lg hover:shadow-xl transition-shadow duration-300">
