@@ -27,7 +27,7 @@ const LandingPage = () => {
   Embrace Your Very Own Culture,
   <span className="flex items-center gap-2 sm:gap-6">
     Discover The Real "You".{" "}
-    <img src="/socities/MCU.png" alt="MCU!" className="h-14 sm:h-24 lg:h-32" />
+    <img src="/MCU.png" alt="MCU!" className="h-14 sm:h-24 lg:h-32" />
   </span>
 </h1>
 <p className="text-gray-300 sm:mt-4 text-xs sm:text-xl">Explore our offerings — enhance your skills, enjoy the journey, and find where you belong.</p>
@@ -61,7 +61,7 @@ const LandingPage = () => {
       </CarouselContent>
       
     </Carousel>
-      <img src="/socities/Socities.png" className="w-full" />
+      <img src="/socities1.png" className="w-full" />
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <Card className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white shadow-lg hover:shadow-xl transition-shadow duration-300">
